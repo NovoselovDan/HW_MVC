@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-Sg-Ydz">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="315" y="28" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchEdited:" destination="BYZ-38-t0r" eventType="valueChanged" id="cBQ-zN-r0q"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-vV-ckr">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="29" width="291" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="textFieldEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="Cah-ng-m9P"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="48" translatesAutoresizingMaskIntoConstraints="NO" id="hSj-vf-3A4">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="121" width="352" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sliderEdited:" destination="BYZ-38-t0r" eventType="valueChanged" id="SAf-re-eg4"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JHH-d3-DQa">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Bold"/>
+                                    <segment title="Italic"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="77" width="348" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentEdited:" destination="BYZ-38-t0r" eventType="valueChanged" id="hMG-MP-Tuz"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdm-Gz-wgP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Color" backgroundImage="button background">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="167" width="170" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="colorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEy-dl-i5h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmO-17-C3p">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset" backgroundImage="button background">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="194" y="167" width="170" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQ9-MZ-9ex"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8cb-Sg-Ydz"/>
+                                <exclude reference="vSy-vV-ckr"/>
+                                <exclude reference="hSj-vf-3A4"/>
+                                <exclude reference="JHH-d3-DQa"/>
+                                <exclude reference="mdm-Gz-wgP"/>
+                                <exclude reference="EmO-17-C3p"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8cb-Sg-Ydz"/>
+                                <include reference="vSy-vV-ckr"/>
+                                <include reference="hSj-vf-3A4"/>
+                                <include reference="JHH-d3-DQa"/>
+                                <include reference="mdm-Gz-wgP"/>
+                                <include reference="EmO-17-C3p"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="colorButton" destination="mdm-Gz-wgP" id="I28-uk-RuI"/>
+                        <outlet property="resetButton" destination="EmO-17-C3p" id="qJZ-G1-iV2"/>
+                        <outlet property="segment" destination="JHH-d3-DQa" id="zgj-7P-B0F"/>
+                        <outlet property="slider" destination="hSj-vf-3A4" id="Qac-pz-OuU"/>
+                        <outlet property="switch1" destination="8cb-Sg-Ydz" id="nvd-Jr-IjS"/>
+                        <outlet property="textField" destination="vSy-vV-ckr" id="qH2-UL-PNJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button background" width="177" height="31"/>
+    </resources>
+</document>
